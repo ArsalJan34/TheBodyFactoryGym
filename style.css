@@ -18,16 +18,35 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid orangered;
-  padding: 20px 30px;
+  width: 100%;
 }
-.logo{
-  color: orangered;
-  font-size: 20px;
-  font-weight: bolder;
-  margin: 5px;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  overflow: hidden;
+
+}
+.logo img {
+  object-fit: contain;
+  width: 150px;
+}
+.navbar{
+  display: flex;
+  gap: 30px;
 }
 .navbar a{
   color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transition: .5s ease;
+  border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+.navbar a:hover{
+ border-bottom: 0.5px solid orangered;
+ color: orangered;
 
 }
 .sidebar {
@@ -84,6 +103,7 @@ header {
   justify-content: space-between;
   width: 140px;
   height: 40px;
+  margin: 10px;
 }
 
 .social-media a {
@@ -100,7 +120,7 @@ header {
 }
 
 .social-media a:hover {
-  border-color: white;
+  border-color: orangered;
 }
 
 .social-media a i {
@@ -110,7 +130,7 @@ header {
 }
 .home {
   width: 100%;
-
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,7 +194,7 @@ header {
 
 /* When hovering */
 .btn:hover {
-  color: gold;
+  color: orangered;
   transform: scale(1.1);
 }
 
@@ -190,6 +210,57 @@ header {
   width: 650px;
   max-width: 100%;
   height: auto;
+}
+.footer{
+  padding: 10px 20px;
+  border-top: 2px solid orangered;
+    background: transparent;
+      width: 100%;
+
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright{
+  padding: 10px 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.copyright strong{
+  color: rgb(129, 124, 124);
+}
+.footer-links{
+  display: flex;
+  gap: 30px;
+}
+.footer-links a {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+    transition: .5s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+    }
+
+    .footer-links a:hover {
+      border-bottom: 0.5px solid orangered;
+      color: orangered;
+
+    }
+.logo2{
+  color: orangered;
+  font-weight:  bolder;
+  font-size: 20px;
+}
+.socials a i{
+font-size: 23px;
+margin-left: 10px;
+color: orangered;
 }
 @media (max-width: 1200px) {
   .navbar a {
