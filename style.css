@@ -283,7 +283,19 @@ color: orangered;
   .navbar {
     display: none;
   }
-
+  .home-content h1{
+font-size: 30px;
+  }
+    .home-content h3 {
+      font-size: 20px;
+    }
+            .home-content p {
+              font-size: 12px;
+            }
+            .btn{
+              padding: 8px 15px;
+              font-size: 10px;
+            }
   .menu-icon {
     display: block;
   }
