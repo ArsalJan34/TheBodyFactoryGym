@@ -459,7 +459,11 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+@media (max-width: 576px) {
+  .services-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 480px) {
   .services-wrapper {
     grid-template-columns: repeat(2, 1fr);
