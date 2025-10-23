@@ -321,14 +321,14 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
 .services-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, fr);
-  gap: 5px;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: stretch;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width:500px;
+  margin: 2px 2px;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .service-box {
@@ -341,7 +341,9 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5px;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .service-box i {
