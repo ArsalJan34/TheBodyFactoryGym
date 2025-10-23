@@ -348,7 +348,123 @@ color: orangered;
   box-shadow: 0 0 15px #ff6600;
   border-color: #ff4500;
 }
+/* Fees chart styling — matches black/orange gym theme */
+.fees-section {
+  background: #000;
+  /* page background (black) */
+  color: #f5f5f5;
+  padding: 60px 4%;
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
 
+.fees-title {
+  color: #ff4500;
+  /* primary accent */
+  font-size: 28px;
+  margin: 0 0 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Responsive container: allows horizontal scroll on small screens */
+.fees-table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  padding: 6px;
+  background: linear-gradient(180deg, rgba(255, 69, 0, 0.06), rgba(255, 69, 0, 0.03));
+}
+
+/* Table base */
+.fees-table {
+  width: 100%;
+  min-width: 820px;
+  /* ensures columns remain readable on narrow screens */
+  border-collapse: collapse;
+  text-align: left;
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
+.fees-table thead th {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, #121212, #0e0e0e);
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 14px;
+  border-bottom: 2px solid rgba(255, 69, 0, 0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* Rows & cells */
+.fees-table tbody td {
+  padding: 14px 18px;
+  font-size: 15px;
+  color: #dcdcdc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  vertical-align: middle;
+}
+
+/* Plan name column */
+.plan-name {
+  font-weight: 700;
+  color: #ffebd6;
+  text-transform: capitalize;
+}
+
+/* Price column emphasised */
+.price {
+  font-weight: 800;
+  color: #ffae00;
+  font-size: 16px;
+}
+
+/* Highlighted recommended plan (platinum) */
+.fees-table tbody tr.highlight {
+  background: linear-gradient(90deg, rgba(255, 69, 0, 0.03), rgba(0, 0, 0, 0));
+  border-left: 4px solid #ff4500;
+}
+
+/* Hover effect for rows */
+.fees-table tbody tr:hover {
+  background: rgba(255, 69, 0, 0.03);
+}
+
+/* Small-screen adjustments */
+@media (max-width: 900px) {
+  .fees-title {
+    font-size: 22px;
+  }
+
+  .fees-table {
+    min-width: 720px;
+  }
+
+  .fees-table thead th,
+  .fees-table tbody td {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .fees-section {
+    padding: 30px 3%;
+  }
+
+  .fees-table {
+    min-width: 640px;
+  }
+
+  .fees-table thead th,
+  .fees-table tbody td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
 
 @media (max-width: 992px) {
   .service-box {
