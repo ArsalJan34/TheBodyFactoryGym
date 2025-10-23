@@ -348,64 +348,65 @@ color: orangered;
   box-shadow: 0 0 15px #ff6600;
   border-color: #ff4500;
 }
-/* Fees chart styling — matches black/orange gym theme */
+/* ===========================
+   FEES CHART STYLING
+   Black background + orange accents
+=========================== */
 .fees-section {
   background: #000;
-  /* page background (black) */
   color: #f5f5f5;
-  padding: 60px 4%;
+  padding: 80px 8%;
   font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
 
-.fees-title {
+.fees-section h2 {
+  text-align: center;
+  font-size: 3rem;
   color: #ff4500;
-  /* primary accent */
-  font-size: 28px;
-  margin: 0 0 24px;
-  letter-spacing: 1px;
+  margin-bottom: 40px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Responsive container: allows horizontal scroll on small screens */
+/* Responsive wrapper for horizontal scroll */
 .fees-table-wrap {
   overflow-x: auto;
-  border-radius: 10px;
-  padding: 6px;
-  background: linear-gradient(180deg, rgba(255, 69, 0, 0.06), rgba(255, 69, 0, 0.03));
+  border-radius: 12px;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(255, 69, 0, 0.08), rgba(255, 69, 0, 0.03));
 }
 
-/* Table base */
+/* Table layout */
 .fees-table {
   width: 100%;
-  min-width: 820px;
-  /* ensures columns remain readable on narrow screens */
+  min-width: 1000px;
+  /* 🟠 Larger base width for laptops */
   border-collapse: collapse;
   text-align: left;
   background: #0f0f0f;
-  border: 1px solid rgba(255, 69, 0, 0.2);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 69, 0, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
-/* Header */
+/* Header styling */
 .fees-table thead th {
   position: sticky;
   top: 0;
-  background: linear-gradient(180deg, #121212, #0e0e0e);
+  background: linear-gradient(180deg, #141414, #0e0e0e);
   color: #fff;
-  padding: 14px 18px;
-  font-size: 14px;
-  border-bottom: 2px solid rgba(255, 69, 0, 0.12);
+  padding: 18px 22px;
+  font-size: 16px;
+  border-bottom: 2px solid rgba(255, 69, 0, 0.25);
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
 }
 
-/* Rows & cells */
+/* Table body cells */
 .fees-table tbody td {
-  padding: 14px 18px;
-  font-size: 15px;
-  color: #dcdcdc;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-  vertical-align: middle;
+  padding: 16px 22px;
+  font-size: 16px;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Plan name column */
@@ -415,28 +416,54 @@ color: orangered;
   text-transform: capitalize;
 }
 
-/* Price column emphasised */
+/* Price column emphasis */
 .price {
   font-weight: 800;
   color: #ffae00;
-  font-size: 16px;
+  font-size: 17px;
 }
 
-/* Highlighted recommended plan (platinum) */
+/* Highlight premium/platinum plan */
 .fees-table tbody tr.highlight {
-  background: linear-gradient(90deg, rgba(255, 69, 0, 0.03), rgba(0, 0, 0, 0));
-  border-left: 4px solid #ff4500;
+  background: linear-gradient(90deg, rgba(255, 69, 0, 0.08), rgba(0, 0, 0, 0));
+  border-left: 5px solid #ff4500;
 }
 
-/* Hover effect for rows */
+/* Hover effect */
 .fees-table tbody tr:hover {
-  background: rgba(255, 69, 0, 0.03);
+  background: rgba(255, 69, 0, 0.07);
+  transition: 0.3s ease;
 }
 
-/* Small-screen adjustments */
+/* ===========================
+   LAPTOP VIEW (wide)
+=========================== */
+@media (max-width: 1280px) {
+  .fees-section {
+    padding: 70px 6%;
+  }
+
+  .fees-table {
+    min-width: 900px;
+  }
+
+  .fees-table thead th,
+  .fees-table tbody td {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+}
+
+/* ===========================
+   TABLET VIEW
+=========================== */
 @media (max-width: 900px) {
-  .fees-title {
-    font-size: 22px;
+  .fees-section {
+    padding: 60px 5%;
+  }
+
+  .fees-section h2 {
+    font-size: 2.2rem;
   }
 
   .fees-table {
@@ -450,13 +477,21 @@ color: orangered;
   }
 }
 
-@media (max-width: 520px) {
+/* ===========================
+   MOBILE VIEW
+=========================== */
+@media (max-width: 600px) {
   .fees-section {
-    padding: 30px 3%;
+    padding: 40px 4%;
+  }
+
+  .fees-section h2 {
+    font-size: 1.8rem;
   }
 
   .fees-table {
-    min-width: 640px;
+    min-width: 600px;
+    /* keeps columns scrollable & readable */
   }
 
   .fees-table thead th,
@@ -464,8 +499,12 @@ color: orangered;
     padding: 10px 12px;
     font-size: 13px;
   }
-}
 
+  .fees-table-wrap {
+    border-radius: 8px;
+    padding: 4px;
+  }
+}
 @media (max-width: 992px) {
   .service-box {
     flex: 2 2 calc(45% - 30px);
