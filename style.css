@@ -297,6 +297,7 @@ header {
   margin-left: 10px;
   color: orangered;
 }
+
 .services-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -310,6 +311,7 @@ header {
   color: #fff;
   text-align: center;
   padding: 80px 20px;
+  margin: 2px;
 }
 
 .section-title {
@@ -320,15 +322,13 @@ header {
   letter-spacing: 2px;
 }
 
-/* Use GRID layout for equal boxes */
 .services-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(4, fr);
+  gap: 5px;
   max-width: 1200px;
   margin: 0 auto;
   align-items: stretch;
-  /* ensures equal height */
 }
 
 .service-box {
@@ -341,7 +341,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* balance content vertically */
+  margin: 5px;
 }
 
 .service-box i {
