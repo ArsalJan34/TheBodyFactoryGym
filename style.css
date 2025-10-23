@@ -1,17 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
-body{
+
+body {
   background: black;
 }
+
 header {
   background: transparent;
   display: flex;
@@ -20,35 +23,39 @@ header {
   border-bottom: 2px solid orangered;
   width: 100%;
 }
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 70px;
   overflow: hidden;
-
 }
+
 .logo img {
   object-fit: contain;
   width: 150px;
 }
-.navbar{
+
+.navbar {
   display: flex;
   gap: 30px;
 }
-.navbar a{
+
+.navbar a {
   color: white;
   font-size: 20px;
   font-weight: 500;
   transition: .5s ease;
   border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
+  padding-bottom: 2px;
 }
-.navbar a:hover{
- border-bottom: 0.5px solid orangered;
- color: orangered;
 
+.navbar a:hover {
+  border-bottom: 0.5px solid orangered;
+  color: orangered;
 }
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -78,8 +85,8 @@ header {
   margin: 18px 0;
   display: block;
   transition: .5s ease;
-    border-bottom: 2px solid transparent;
-      padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
 }
 
 .sidebar a:hover {
@@ -91,13 +98,13 @@ header {
   color: white;
   font-size: 30px;
   margin-bottom: 15px;
-  transition:.5s ease;
-}
-.sidebar .bx-x:hover{
-border-bottom: none;
-color: orangered;
+  transition: .5s ease;
 }
 
+.sidebar .bx-x:hover {
+  border-bottom: none;
+  color: orangered;
+}
 
 .menu-icon {
   display: none;
@@ -109,6 +116,7 @@ color: orangered;
   font-size: 32px;
   margin-right: 20px;
 }
+
 .social-media {
   display: flex;
   justify-content: space-between;
@@ -139,9 +147,9 @@ color: orangered;
   color: white;
   transform: rotate(-45deg);
 }
+
 .home {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./images/GYM-Background-Pictures.jpg") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/GYM-Background-Pictures.jpg") no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -181,6 +189,7 @@ color: orangered;
   color: #f5f5f5;
   line-height: 1.6;
 }
+
 .btn {
   position: relative;
   display: inline-block;
@@ -226,19 +235,21 @@ color: orangered;
   max-width: 100%;
   height: auto;
 }
-.footer{
+
+.footer {
   padding: 10px 20px;
   border-top: 2px solid orangered;
-    background: transparent;
-      width: 100%;
-
+  background: transparent;
+  width: 100%;
 }
-.footer-content{
+
+.footer-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.copyright{
+
+.copyright {
   padding: 10px 5px;
   color: white;
   display: flex;
@@ -246,45 +257,49 @@ color: orangered;
   align-items: center;
   flex-direction: column;
 }
-.copyright strong{
+
+.copyright strong {
   color: rgb(129, 124, 124);
 }
-.footer-links{
+
+.footer-links {
   display: flex;
   gap: 30px;
 }
+
 .footer-links a {
   color: white;
   font-weight: 500;
   font-size: 18px;
-    transition: .5s ease;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 2px;
-    }
+  transition: .5s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
 
-    .footer-links a:hover {
-      border-bottom: 0.5px solid orangered;
-      color: orangered;
-
-    }
-.logo2{
+.footer-links a:hover {
+  border-bottom: 0.5px solid orangered;
   color: orangered;
-  font-weight:  bolder;
+}
+
+.logo2 {
+  color: orangered;
+  font-weight: bolder;
   font-size: 20px;
 }
-.socials{
+
+.socials {
   display: flex;
   gap: 10px;
 }
-.socials a i{
-font-size: 23px;
-margin-left: 10px;
-color: orangered;
+
+.socials a i {
+  font-size: 23px;
+  margin-left: 10px;
+  color: orangered;
 }
 
 .services {
   background-color: #000;
-
   color: #fff;
   text-align: center;
   padding: 80px 20px;
@@ -298,7 +313,6 @@ color: orangered;
   letter-spacing: 2px;
 }
 
-
 .services-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -308,10 +322,8 @@ color: orangered;
   margin: 0 auto;
 }
 
-
 .service-box {
   flex: 1 1 calc(25% - 30px);
-
   background-color: #111;
   border: 2px solid #ff6600;
   border-radius: 12px;
@@ -342,16 +354,12 @@ color: orangered;
   line-height: 1.5;
 }
 
-
 .service-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 15px #ff6600;
   border-color: #ff4500;
 }
-/* ===========================
-   FEES CHART STYLING
-   Black background + orange accents
-=========================== */
+
 .fees-section {
   background: #000;
   color: #f5f5f5;
@@ -368,7 +376,6 @@ color: orangered;
   letter-spacing: 1px;
 }
 
-/* Responsive wrapper for horizontal scroll */
 .fees-table-wrap {
   overflow-x: auto;
   border-radius: 12px;
@@ -376,11 +383,9 @@ color: orangered;
   background: linear-gradient(180deg, rgba(255, 69, 0, 0.08), rgba(255, 69, 0, 0.03));
 }
 
-/* Table layout */
 .fees-table {
   width: 100%;
   min-width: 1000px;
-  /* 🟠 Larger base width for laptops */
   border-collapse: collapse;
   text-align: left;
   background: #0f0f0f;
@@ -388,7 +393,6 @@ color: orangered;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
-/* Header styling */
 .fees-table thead th {
   position: sticky;
   top: 0;
@@ -401,7 +405,6 @@ color: orangered;
   letter-spacing: 1px;
 }
 
-/* Table body cells */
 .fees-table tbody td {
   padding: 16px 22px;
   font-size: 16px;
@@ -409,35 +412,28 @@ color: orangered;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Plan name column */
 .plan-name {
   font-weight: 700;
   color: #ffebd6;
   text-transform: capitalize;
 }
 
-/* Price column emphasis */
 .price {
   font-weight: 800;
   color: #ffae00;
   font-size: 17px;
 }
 
-/* Highlight premium/platinum plan */
 .fees-table tbody tr.highlight {
   background: linear-gradient(90deg, rgba(255, 69, 0, 0.08), rgba(0, 0, 0, 0));
   border-left: 5px solid #ff4500;
 }
 
-/* Hover effect */
 .fees-table tbody tr:hover {
   background: rgba(255, 69, 0, 0.07);
   transition: 0.3s ease;
 }
 
-/* ===========================
-   LAPTOP VIEW (wide)
-=========================== */
 @media (max-width: 1280px) {
   .fees-section {
     padding: 70px 6%;
@@ -454,9 +450,6 @@ color: orangered;
   }
 }
 
-/* ===========================
-   TABLET VIEW
-=========================== */
 @media (max-width: 900px) {
   .fees-section {
     padding: 60px 5%;
@@ -477,9 +470,6 @@ color: orangered;
   }
 }
 
-/* ===========================
-   MOBILE VIEW
-=========================== */
 @media (max-width: 600px) {
   .fees-section {
     padding: 40px 4%;
@@ -491,7 +481,6 @@ color: orangered;
 
   .fees-table {
     min-width: 600px;
-    /* keeps columns scrollable & readable */
   }
 
   .fees-table thead th,
@@ -503,6 +492,18 @@ color: orangered;
   .fees-table-wrap {
     border-radius: 8px;
     padding: 4px;
+  }
+}
+
+@media (max-width: 992px) {
+  .service-box {
+    flex: 1 1 calc(50% - 30px);
+  }
+}
+
+@media (max-width: 576px) {
+  .service-box {
+    flex: 1 1 calc(50% - 20px);
   }
 }
 
@@ -519,23 +520,28 @@ color: orangered;
     margin: 0 5px;
   }
 }
+
 @media (max-width: 768px) {
   .navbar {
     display: none;
   }
-  .home-content h1{
-font-size: 30px;
+
+  .home-content h1 {
+    font-size: 30px;
   }
-    .home-content h3 {
-      font-size: 20px;
-    }
-            .home-content p {
-              font-size: 12px;
-            }
-            .btn{
-              padding: 8px 15px;
-              font-size: 10px;
-            }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 10px;
+  }
 
   .menu-icon {
     display: block;
@@ -544,11 +550,14 @@ font-size: 30px;
   .social-media {
     display: none;
   }
-.footer-content, .footer-links{
-  flex-direction: column;
-  align-items: center;
-}
-.footer{
-  align-items: center;
-}
+
+  .footer-content,
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    align-items: center;
+  }
 }
