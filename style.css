@@ -297,42 +297,22 @@ header {
   margin-left: 10px;
   color: orangered;
 }
-
-.services {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  color: #ff6600;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 .services-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .service-box {
-  flex: 1 1 calc(25% - 30px);
-  background-color: #111;
+  background: #111;
   border: 2px solid #ff6600;
   border-radius: 12px;
   padding: 30px 20px;
-  box-sizing: border-box;
+  text-align: center;
   transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .service-box i {
@@ -342,10 +322,10 @@ header {
 }
 
 .service-box h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
   color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .service-box p {
@@ -359,6 +339,9 @@ header {
   box-shadow: 0 0 15px #ff6600;
   border-color: #ff4500;
 }
+
+/* Responsive breakpoints */
+
 
 .fees-section {
   background: #000;
@@ -433,7 +416,23 @@ header {
   background: rgba(255, 69, 0, 0.07);
   transition: 0.3s ease;
 }
+@media (max-width: 992px) {
+  .services-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
+@media (max-width: 768px) {
+  .services-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 1280px) {
   .fees-section {
     padding: 70px 6%;
@@ -495,17 +494,6 @@ header {
   }
 }
 
-@media (max-width: 992px) {
-  .service-box {
-    flex: 1 1 calc(50% - 30px);
-  }
-}
-
-@media (max-width: 576px) {
-  .service-box {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
 
 @media (max-width: 1200px) {
   .navbar a {
