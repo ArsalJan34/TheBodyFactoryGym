@@ -77,17 +77,27 @@ header {
   font-size: 18px;
   margin: 18px 0;
   display: block;
+  transition: .5s ease;
+    border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
 }
 
 .sidebar a:hover {
-  color: gold;
+  border-bottom: 0.5px solid orangered;
+  color: orangered;
 }
 
 .sidebar .bx-x {
   color: white;
   font-size: 30px;
   margin-bottom: 15px;
+  transition:.5s ease;
 }
+.sidebar .bx-x:hover{
+border-bottom: none;
+color: orangered;
+}
+
 
 .menu-icon {
   display: none;
@@ -130,11 +140,14 @@ header {
   transform: rotate(-45deg);
 }
 .home {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/GYM-Background-Pictures.jpg") no-repeat center center;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 100px 8% 50px;
   position: relative;
   overflow: hidden;
@@ -143,70 +156,71 @@ header {
 
 .home-content {
   max-width: 600px;
+  z-index: 1;
 }
 
 .home-content h1 {
-  font-size: 50px;
+  font-size: 55px;
   line-height: 1.2;
-  color: white;
+  color: #ff4500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
 }
 
 .home-content h3 {
-  font-size: 38px;
-  color: rgb(150, 150, 155);
+  font-size: 36px;
+  color: #ffae00;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 .home-content p {
-  font-size: 16px;
-  margin: 15px 0 30px;
-  color: white;
+  font-size: 17px;
+  margin: 20px 0 35px;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
-
 .btn {
   position: relative;
-  /* Needed for positioning the star */
   display: inline-block;
-  padding: 10px 25px;
-  background: none;
-  border: 2px solid rgb(94, 94, 99);
+  padding: 12px 32px;
+  background: transparent;
+  border: 2px solid #ff4500;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+  color: #fff;
+  font-size: 17px;
   letter-spacing: 1px;
-  font-weight: 500;
-  transition: .3s ease;
+  font-weight: 600;
+  transition: 0.3s ease;
   cursor: pointer;
   overflow: visible;
-  /* allow the star to show outside the button */
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
 }
 
-/* Star hidden by default */
 .btn::after {
-  content: "✨";
+  content: "🔥";
   position: absolute;
-  right: -20px;
+  right: -25px;
   top: 50%;
   transform: translateY(-50%) scale(0);
   opacity: 0;
   transition: all 0.4s ease;
 }
 
-/* When hovering */
 .btn:hover {
-  color: orangered;
-  transform: scale(1.1);
+  color: #ffae00;
+  background: rgba(255, 69, 0, 0.15);
+  border-color: #ffae00;
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.5);
+  transform: scale(1.05);
 }
 
-/* Show star on hover */
 .btn:hover::after {
   transform: translateY(-50%) translateX(10px) scale(1.2);
   opacity: 1;
 }
 
-
-/* =============== WATCH IMAGE =============== */
 .watch img {
   width: 650px;
   max-width: 100%;
@@ -266,6 +280,86 @@ header {
 font-size: 23px;
 margin-left: 10px;
 color: orangered;
+}
+
+.services {
+  background-color: #000;
+
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #ff6600;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.service-box {
+  flex: 1 1 calc(25% - 30px);
+
+  background-color: #111;
+  border: 2px solid #ff6600;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-box i {
+  font-size: 2.5rem;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.service-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.service-box p {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px #ff6600;
+  border-color: #ff4500;
+}
+
+
+@media (max-width: 992px) {
+  .service-box {
+    flex: 2 2 calc(45% - 30px);
+  }
+}
+
+@media (max-width: 576px) {
+  .service-box {
+    flex: 1 1 100%;
+  }
 }
 @media (max-width: 1200px) {
   .navbar a {
