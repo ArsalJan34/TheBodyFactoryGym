@@ -433,6 +433,8 @@ header {
   font-weight: 700;
   color: #ffebd6;
   text-transform: capitalize;
+  background:orangered;
+  border: gray 2px solid;
 }
 
 .price {
