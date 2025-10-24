@@ -377,14 +377,15 @@ header {
 
 
 
-.fees-section {
+.fees-section, .packages-section, .timing-section {
   background: #000;
   color: #f5f5f5;
   padding: 80px 8%;
   font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
 }
 
-.fees-section h2 {
+.fees-section h2, .packages-section h2,
+.timing-section h2 {
   text-align: center;
   font-size: 3rem;
   color: #ff4500;
@@ -393,14 +394,14 @@ header {
   letter-spacing: 1px;
 }
 
-.fees-table-wrap {
+.fees-table-wrap, .packages-table-wrap,.time-table-wrap {
   overflow-x: auto;
   border-radius: 12px;
   padding: 10px;
   background: linear-gradient(180deg, rgba(255, 69, 0, 0.08), rgba(255, 69, 0, 0.03));
 }
 
-.fees-table {
+.fees-table, .packages-table, .time-table {
   width: 100%;
   min-width: 1000px;
   border-collapse: collapse;
@@ -410,7 +411,7 @@ header {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
-.fees-table thead th {
+.fees-table thead th, .packages-table thead th, .time-table thead th {
   position: sticky;
   top: 0;
   background: linear-gradient(180deg, #141414, #0e0e0e);
@@ -423,7 +424,7 @@ header {
   text-align: center;
 }
 
-.fees-table tbody td {
+.fees-table tbody td,.packages-table tbody td, .time-table tbody td {
   padding: 16px 22px;
   font-size: 15px;
   color: #e0e0e0;
@@ -439,7 +440,7 @@ header {
   border: gray 2px solid;
 }
 
-.plan-name2 strong {
+.plan-name2 h2 {
   font-size: 15px;
 }
 .price {
@@ -459,11 +460,13 @@ header {
 }
 
 
-.fees-table tbody tr:hover {
+.fees-table tbody tr:hover,.time-table tbody tr:hover,.packages-table tbody tr:hover {
   background: rgba(255, 69, 0, 0.07);
   transition: 0.3s ease;
 }
-.fees-table td {
+.fees-table td,
+.time-table td,
+.packages-table  td {
   padding: 18px 22px;
   vertical-align: middle;
 }
@@ -494,7 +497,7 @@ header {
   }
 }
 @media (max-width: 1280px) {
-  .fees-section {
+  .fees-section, .timing-section, .packages-section {
     padding: 70px 6%;
   }
 
@@ -503,18 +506,18 @@ header {
   }
 
   .fees-table thead th,
-  .fees-table tbody td {
+  .fees-table tbody td, .packages-table thead th, .packages-table tbody td, .time-table thead th, .time-table thead td {
     padding: 14px 18px;
     font-size: 15px;
   }
 }
 
 @media (max-width: 900px) {
-  .fees-section {
+  .fees-section, .timing-section, .packages-section {
     padding: 60px 5%;
   }
 
-  .fees-section h2 {
+  .fees-section h2, .timing-section h2, .packages-section h2 {
     font-size: 2.2rem;
   }
 
@@ -608,4 +611,8 @@ header {
   .footer {
     align-items: center;
   }
+}
+* {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
