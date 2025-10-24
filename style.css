@@ -436,7 +436,14 @@ header {
   background:orangered;
   border: gray 2px solid;
 }
-
+.plan-name{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.plan-name strong {
+  font-size: 15px;
+}
 .price {
   font-weight: 800;
   color: #ffae00;
