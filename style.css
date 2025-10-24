@@ -506,7 +506,7 @@ header {
   }
 
   .fees-table thead th,
-  .fees-table tbody td, .packages-table thead th, .packages-table tbody td, .time-table thead th, .time-table thead td {
+  .fees-table tbody td, .packages-table thead th, .packages-table tbody td, .time-table thead th, .time-table tbody td {
     padding: 14px 18px;
     font-size: 15px;
   }
@@ -526,18 +526,23 @@ header {
   }
 
   .fees-table thead th,
-  .fees-table tbody td {
+  .fees-table tbody td, .packages-table thead th,
+   .packages-table tbody td,
+   .time-table thead th,
+   .time-table tbody td {
     padding: 12px 14px;
     font-size: 14px;
   }
 }
 
 @media (max-width: 600px) {
-  .fees-section {
+  .fees-section,.timing-section,
+    .packages-section {
     padding: 40px 4%;
   }
 
-  .fees-section h2 {
+  .fees-section h2,.timing-section h2,
+  .packages-section h2{
     font-size: 1.8rem;
   }
 
