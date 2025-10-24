@@ -546,17 +546,20 @@ header {
     font-size: 1.8rem;
   }
 
-  .fees-table {
+  .fees-table,.packages-table,.time-table {
     min-width: 600px;
   }
 
   .fees-table thead th,
-  .fees-table tbody td {
+  .fees-table tbody td, .packages-table thead th,
+   .packages-table tbody td,
+   .time-table thead th,
+   .time-table tbody td {
     padding: 10px 12px;
     font-size: 13px;
   }
 
-  .fees-table-wrap {
+  .fees-table-wrap, .time-table-wrap, .packages-table-wrap {
     border-radius: 8px;
     padding: 4px;
   }
