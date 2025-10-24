@@ -521,7 +521,7 @@ header {
     font-size: 2.2rem;
   }
 
-  .fees-table {
+  .fees-table, .packages-table, .time-table {
     min-width: 720px;
   }
 
