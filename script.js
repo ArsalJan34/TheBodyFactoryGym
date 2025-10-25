@@ -20,3 +20,21 @@ function sendWhatsApp(planName) {
   const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   window.open(url, "_blank");
 }
+  const backToTop = document.getElementById("backToTop");
+
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+
+  // Scroll smoothly to top when clicked
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });

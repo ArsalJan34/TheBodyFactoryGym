@@ -12,20 +12,20 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <div class="logo"><img src="./images/green logo.png"></div>
     <nav class="sidebar">
       <a href="#" onclick="hideSidebar()"><i class='bx bx-x'></i></a>
       <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Packages</a>
-      <a href="#">Timing</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#timing">Timing</a>
     </nav>
     <nav class="navbar">
       <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Packages</a>
-      <a href="#">Timing</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#timing">Timing</a>
     </nav>
     <div class="social-media">
       <a href="#"><i class='bx bxl-facebook-circle'></i></a>
@@ -36,6 +36,7 @@
           <a href="#"><i class='bx bx-menu'></i></a>
         </div>
   </header>
+
 <section class="home">
   <div class="home-content">
     <h1>Unleash Your Strength</h1>
@@ -131,7 +132,7 @@
 </section>
 
 
-<section class="fees-section">
+<section id="fees" class="fees-section">
   <h2 class="fees-title">Membership Fees</h2>
 
   <div class="fees-table-wrap">
@@ -182,7 +183,7 @@
     </table>
   </div>
 </section>
-<section class="packages-section">
+<section id="packages" class="packages-section">
   <h2 class="packages-titles">Packages</h2>
 
   <div class="packages-table-wrap">
@@ -223,7 +224,7 @@
     </table>
   </div>
 </section>
-<section class="timing-section">
+<section  id="timing" class="timing-section">
   <h2 class="time-title">Timings</h2>
 
   <div class="time-table-wrap">
@@ -288,6 +289,7 @@
     <p><strong>Developed By Arsal Chandio</strong></p>
   </div>
 </footer>
+<button id="backToTop" title="Go to top">⬆</button>
 
   <script src="script.js"></script>
 </body>
