@@ -396,7 +396,7 @@ header {
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid orangered;
   border-radius: 20px;
-  padding: 30px 20px;
+  padding: 80px 5px;
   overflow: hidden;
   transition: 0.5s ease;
   z-index: 1;
