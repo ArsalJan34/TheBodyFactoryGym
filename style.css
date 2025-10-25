@@ -475,6 +475,93 @@ header {
 .price {
   text-align: center;
 }
+.location-footer {
+  border-top: orangered 2px solid;
+  background: black;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.location-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.map {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  /* keeps it square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 69, 0, 0.1);
+  border: 2px solid orangered;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.map:hover {
+  background: orangered;
+  transform: scale(1.1);
+}
+
+.map i {
+  font-size: 25px;
+  color: orangered;
+  transition: 0.3s ease;
+}
+
+.map:hover i {
+  color: white;
+}
+
+.location {
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.phone {
+  gap: 10px;
+  background: rgba(255, 69, 0, 0.1);
+  border: 2px solid orangered;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  font-size: 16px;
+}
+
+.phone i {
+  color: orangered;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.phone:hover {
+  background: orangered;
+  transform: scale(1.05);
+}
+
+.phone:hover i {
+  color: white;
+}
 @media (max-width: 992px) {
   .services-wrapper {
     grid-template-columns: repeat(3, 1fr);
